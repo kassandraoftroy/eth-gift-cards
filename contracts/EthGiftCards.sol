@@ -87,9 +87,9 @@ contract EthGiftCards is ERC721Enumerable, Ownable, ReentrancyGuard {
         string[17] memory parts;
         parts[0] = themes[card.theme];
         parts[1] = getValueString(card.value);
-        parts[2] = ' /><text x="10" y="60" class="base"> from: ';
+        parts[2] = ' ETH</text><text x="10" y="60" class="base"> from: ';
         parts[3] = getIssuerString(card.issuer, card.ens);
-        parts[4] = ' ETH</text><text x="10" y="100" class="base">note:</text><text x="30" y="120" class="base">';
+        parts[4] = '</text><text x="10" y="100" class="base">note:</text><text x="30" y="120" class="base">';
         parts[5] = card.note[0];
         parts[6] = '</text><text x="30" y="140" class="base">';
         parts[7] = card.note[1];
